@@ -1,0 +1,5 @@
+Accepts competion type and number of wrestlers
+
+Type = singles or tags
+
+Run commands node main.js singles 32
