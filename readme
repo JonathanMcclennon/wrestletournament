@@ -1,5 +1,13 @@
+npm i
+npm start
+
+Runs the script by default with singles and 32 entrants
 Accepts competion type and number of wrestlers
 
 Type = singles or tags
 
 Run commands node main.js singles 32
+
+TODO:
+Allow for different match ranges triple threat, fatal 4 way
+Basic GUI
