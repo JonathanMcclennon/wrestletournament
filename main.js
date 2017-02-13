@@ -35,7 +35,9 @@ function printMatch(entrantOne, entrantTwo) {
 }
 
 
-function getTournament() {
+module.exports = function() {
+	console.info('Getting Match');
+	let match = [];
 	const entrantType = process.argv[2] || DEFAULT_ENTRANT_TYPE;
 	const numberOfEntrants = process.argv[3] || DEFAULT_NUMBER_OF_ENTRANT;
 
@@ -44,10 +46,13 @@ function getTournament() {
 
 
 	for(var i=0; i<entrants.length-1;i++) {
-		printMatch(entrants[i], entrants[i+1]);
+		match.push({
+			entrantOne: entrants[i],
+			entrantTwo: entrants[i+1]
+		});
 		i++;
 	}	
+	return match;
 }
 
-getTournament();
 
