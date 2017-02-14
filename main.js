@@ -35,14 +35,14 @@ function printMatch(entrantOne, entrantTwo) {
 }
 
 
-module.exports = function() {
+module.exports = function({type, numberOfEntrants}) {
 	console.info('Getting Match');
 	let match = [];
-	const entrantType = process.argv[2] || DEFAULT_ENTRANT_TYPE;
-	const numberOfEntrants = process.argv[3] || DEFAULT_NUMBER_OF_ENTRANT;
+	type = type || DEFAULT_ENTRANT_TYPE;
+	numberOfEntrants = numberOfEntrants || DEFAULT_NUMBER_OF_ENTRANT;
 
-	const shuffledEntrants = getShuffledEntrants(entrantType);
-	const entrants = getCorrectNumberOfEntrants(shuffledEntrants, numberOfEntrants)
+	const shuffledEntrants = getShuffledEntrants(type);
+	const entrants = getCorrectNumberOfEntrants(shuffledEntrants, Number(numberOfEntrants))
 
 
 	for(var i=0; i<entrants.length-1;i++) {

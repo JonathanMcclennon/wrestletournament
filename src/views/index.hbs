@@ -2,11 +2,20 @@
 	<head>
 	</head>
 	<body>
-		<div>Hello</div>
-		<ul>
-		{{#each results}}
-		<li><span>{{this.entrantOne}}</span> VS <span>{{this.entrantTwo}}</span></li>
-		{{/each}}
-		</ul>
+		<div>Select the tournament preferences</div>
+		<form action="/result" method="post">
+		Tournament Type
+		<select name="type">
+			<option value="singles">Singles</option>
+			<option value="tags">Tag Team</options>
+		</select>
+		Number of entrants
+		<select name="number">
+			<option value="8">8</option>
+			<option value="16">16</option>
+			<option value="32">32</option>
+		</select>		
+		<input type="submit" value="Create Tournament" />
+		</form>
 	</body>
 </html>
